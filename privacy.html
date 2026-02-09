@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Политика конфиденциальности - Candy Crush - Сочный матч</title>
+    <meta name="description" content="Политика конфиденциальности приложения Candy Crush - Сочный матч для Android.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="privacy-page">
+<div class="bg-orb bg-orb-1" aria-hidden="true"></div>
+<div class="bg-orb bg-orb-2" aria-hidden="true"></div>
+
+<header class="topbar container">
+    <a class="brand" href="index.html" aria-label="На главную Candy Crush - Сочный матч">
+        <span class="brand-badge">JM</span>
+        <span>Candy Crush - Сочный матч</span>
+    </a>
+    <nav class="topnav">
+        <a class="btn btn-sm btn-outline" href="index.html">На главную</a>
+        <a class="btn btn-sm btn-outline" href="privacy-en.html" lang="en" hreflang="en">EN</a>
+    </nav>
+</header>
+
+<main class="container legal">
+    <p class="kicker">Официальный документ</p>
+    <h1>Политика конфиденциальности</h1>
+    <p class="legal-meta">Дата вступления в силу: 9 февраля 2026 года</p>
+    <p class="legal-meta">Последнее обновление: 9 февраля 2026 года</p>
+
+    <div class="warning-box">
+        Перед публикацией заполните реквизиты оператора: юридическое наименование и контактный email в разделе 10.
+    </div>
+
+    <section>
+        <h2>1. Общие положения</h2>
+        <p>
+            Настоящая Политика описывает, какие данные обрабатываются в мобильном приложении Candy Crush - Сочный матч (Android),
+            для каких целей и какими способами. Используя приложение, пользователь соглашается с условиями данной Политики.
+        </p>
+    </section>
+
+    <section>
+        <h2>2. Какие данные мы обрабатываем</h2>
+        <ul>
+            <li>
+                Локальные игровые данные на устройстве: прогресс уровней, количество звезд, внутриигровые ресурсы
+                (монеты, бустеры), состояние таймера жизней и игровые настройки.
+            </li>
+            <li>
+                Технический идентификатор пользователя: случайно сгенерированный UUID, сохраняемый локально
+                и передаваемый в аналитические/диагностические сервисы.
+            </li>
+            <li>
+                События аналитики приложения (например, открытие приложения/экранов, действия с кнопками,
+                старт рекламы, завершение уровня, взаимодействие с уведомлениями).
+            </li>
+            <li>
+                Данные об ошибках и сбоях (crash-отчеты), включая технические параметры устройства и стека вызовов.
+            </li>
+            <li>
+                Данные, необходимые для показа рекламы через Yandex Mobile Ads SDK
+                (в объеме, определяемом SDK и настройками устройства/ОС).
+            </li>
+            <li>
+                Статус разрешения на уведомления и факт взаимодействия с локальным уведомлением при открытии приложения.
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>3. Для каких целей используются данные</h2>
+        <ul>
+            <li>Обеспечение работы основных игровых механик и сохранения прогресса.</li>
+            <li>Показ rewarded/interstitial рекламы и контроль рекламных сценариев.</li>
+            <li>Анализ поведения в приложении для улучшения UX и игрового баланса.</li>
+            <li>Диагностика сбоев и повышение стабильности приложения.</li>
+            <li>Показ локальных возвратных уведомлений (без push-инфраструктуры).</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>4. Локальные уведомления</h2>
+        <p>
+            Приложение использует локальные (device-side) уведомления, планируемые на устройстве через системные механизмы Android.
+            Для Android 13+ запрашивается разрешение <code>POST_NOTIFICATIONS</code>.
+            При отсутствии разрешения уведомления не показываются.
+        </p>
+        <p>
+            Тап по уведомлению открывает приложение. В текущей реализации напоминания формируются на устройстве
+            и не требуют FCM/Push-сервисов.
+        </p>
+    </section>
+
+    <section>
+        <h2>5. Сторонние сервисы</h2>
+        <p>В приложении используются следующие SDK/сервисы:</p>
+        <ul>
+            <li>
+                Yandex Mobile Ads SDK (реклама):
+                <a href="https://yandex.com/support2/mobile-ads/en/resources/privacy-policy" target="_blank" rel="noopener noreferrer">
+                    Privacy policy
+                </a>
+            </li>
+            <li>
+                Amplitude (аналитика):
+                <a href="https://amplitude.com/privacy" target="_blank" rel="noopener noreferrer">
+                    Privacy Notice
+                </a>
+            </li>
+            <li>
+                Firebase Crashlytics (диагностика сбоев):
+                <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">
+                    Firebase Privacy and Security
+                </a>
+            </li>
+            <li>
+                Google Privacy Policy:
+                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
+                    Google Privacy Policy
+                </a>
+            </li>
+        </ul>
+        <p>
+            Указанные сервисы могут обрабатывать технические данные в соответствии с их собственными условиями и политиками.
+        </p>
+    </section>
+
+    <section>
+        <h2>6. Хранение и удаление данных</h2>
+        <ul>
+            <li>Игровой прогресс и настройки хранятся локально на устройстве пользователя.</li>
+            <li>Пользователь может удалить локальные данные через удаление приложения или очистку данных приложения в Android.</li>
+            <li>Данные, переданные внешним сервисам, регулируются правилами этих сервисов.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>7. Передача данных</h2>
+        <p>
+            Передача данных возможна только в объеме, необходимом для работы подключенных SDK
+            (реклама, аналитика, crash-диагностика). Приложение не предоставляет пользователю регистрацию аккаунта
+            и не собирает контактные данные напрямую через UI.
+        </p>
+    </section>
+
+    <section>
+        <h2>8. Безопасность</h2>
+        <p>
+            Мы применяем разумные организационные и технические меры для защиты данных.
+            При этом передача данных через сеть и инфраструктуру сторонних сервисов не может быть гарантирована как абсолютно безопасная.
+        </p>
+    </section>
+
+    <section>
+        <h2>9. Изменения политики</h2>
+        <p>
+            Политика может обновляться. Актуальная версия публикуется на этой странице с указанием даты последнего обновления.
+        </p>
+    </section>
+
+    <section>
+        <h2>10. Оператор и контакты</h2>
+        <p><strong>Оператор персональных данных:</strong> [УКАЖИТЕ ЮРЛИЦО / ИП / ФИО]</p>
+        <p><strong>Контактный email:</strong> [УКАЖИТЕ EMAIL ДЛЯ ЗАПРОСОВ ПО КОНФИДЕНЦИАЛЬНОСТИ]</p>
+        <p><strong>Страница проекта:</strong> <a href="https://github.com/Antiglobalist/candy-crush" target="_blank" rel="noopener noreferrer">github.com/Antiglobalist/candy-crush</a></p>
+    </section>
+</main>
+
+<footer class="footer legal-footer">
+    <div class="container footer-row">
+        <p>© 2026 Candy Crush - Сочный матч</p>
+        <div class="footer-links">
+            <a href="index.html">Лендинг</a>
+            <a href="privacy.html">Политика</a>
+            <a href="privacy-en.html" lang="en" hreflang="en">English</a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

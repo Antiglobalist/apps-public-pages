@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Candy Crush - Сочный матч</title>
+    <meta name="description" content="Candy Crush - Сочный матч: яркая match-3 игра для Android с уровнями, бустерами, наградами и локальными уведомлениями.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="landing-page">
+<div class="bg-orb bg-orb-1" aria-hidden="true"></div>
+<div class="bg-orb bg-orb-2" aria-hidden="true"></div>
+<div class="bg-grid" aria-hidden="true"></div>
+
+<header class="topbar container">
+    <a class="brand" href="./" aria-label="Candy Crush - Сочный матч">
+        <span class="brand-badge">JM</span>
+        <span>Candy Crush - Сочный матч</span>
+    </a>
+    <nav class="topnav" aria-label="Основная навигация">
+        <a href="#features">Особенности</a>
+        <a href="#privacy">Приватность</a>
+        <a class="btn btn-sm btn-outline" href="privacy.html">Политика</a>
+        <a class="btn btn-sm btn-outline" href="index-en.html" lang="en" hreflang="en">EN</a>
+    </nav>
+</header>
+
+<main>
+    <section class="hero container">
+        <div class="hero-copy reveal">
+            <p class="kicker">Android Match-3</p>
+            <h1>Сладкая головоломка, к которой хочется возвращаться каждый день</h1>
+            <p class="lead">
+                Candy Crush - Сочный матч - это динамичная игра в жанре match-3 с препятствиями, бустерами,
+                наградами за активность и понятным прогрессом. Игра адаптирована под российский рынок и публикацию в RuStore.
+            </p>
+            <div class="chip-row">
+                <span class="chip">Yandex Ads</span>
+                <span class="chip">Локальные уведомления</span>
+                <span class="chip">Оффлайн-прогресс</span>
+            </div>
+            <div class="hero-actions">
+                <a class="btn btn-primary" href="https://apps.rustore.ru/" target="_blank" rel="noopener noreferrer">Скоро в RuStore</a>
+                <a class="btn btn-outline" href="privacy.html">Политика конфиденциальности</a>
+            </div>
+        </div>
+
+        <div class="hero-art reveal reveal-delay-1">
+            <img src="assets/icon_store.png" alt="Иконка приложения Candy Crush - Сочный матч">
+            <img src="assets/feature_graph.png" alt="Графика и элементы интерфейса Candy Crush - Сочный матч">
+        </div>
+    </section>
+
+    <section id="features" class="section container">
+        <div class="section-head reveal">
+            <p class="kicker">Что внутри</p>
+            <h2>Фокус на UX, ритм и короткие игровые сессии</h2>
+        </div>
+        <div class="feature-grid">
+            <article class="feature-card reveal">
+                <h3>Сотни уровней</h3>
+                <p>Много контента с разными типами целей, препятствий и сценариев прохождения.</p>
+            </article>
+            <article class="feature-card reveal reveal-delay-1">
+                <h3>Бустеры и награды</h3>
+                <p>Встроенная экономика бустеров и наград, включая rewarded-механики и ежедневные бонусы.</p>
+            </article>
+            <article class="feature-card reveal reveal-delay-2">
+                <h3>Честная ротация interstitial</h3>
+                <p>Показы только в естественных паузах: без прерывания активного gameplay и с лимитом частоты.</p>
+            </article>
+            <article class="feature-card reveal">
+                <h3>Локальные уведомления</h3>
+                <p>Напоминания о возвращении в игру работают на устройстве без push-сервисов.</p>
+            </article>
+            <article class="feature-card reveal reveal-delay-1">
+                <h3>Сохранение прогресса</h3>
+                <p>Прогресс, звезды, ресурсы и таймер жизней сохраняются локально на устройстве.</p>
+            </article>
+            <article class="feature-card reveal reveal-delay-2">
+                <h3>Стабильная аналитика</h3>
+                <p>Интеграция аналитики и crash-диагностики помогает улучшать продукт и устранять ошибки.</p>
+            </article>
+        </div>
+    </section>
+
+    <section id="privacy" class="section container">
+        <div class="privacy-banner reveal">
+            <div>
+                <p class="kicker">Приватность</p>
+                <h2>Понятно, какие данные используются и зачем</h2>
+                <p>
+                    В приложении используются Yandex Mobile Ads, Amplitude и Firebase Crashlytics.
+                    Основной игровой прогресс хранится локально на устройстве.
+                </p>
+            </div>
+            <a class="btn btn-primary" href="privacy.html">Открыть политику</a>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container footer-row">
+        <p>© 2026 Candy Crush - Сочный матч</p>
+        <div class="footer-links">
+            <a href="privacy.html">Политика конфиденциальности</a>
+            <a href="index-en.html" lang="en" hreflang="en">English</a>
+            <a href="https://github.com/Antiglobalist/candy-crush" target="_blank" rel="noopener noreferrer">Исходный код</a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
