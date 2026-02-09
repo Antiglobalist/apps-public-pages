@@ -2,20 +2,20 @@
 
 Статические страницы для GitHub Pages:
 
-- `index.html` - RU landing страница приложения `Candy Crush - Сочный матч`.
-- `privacy.html` - RU политика конфиденциальности.
-- `index-en.html` - EN landing страница приложения `Candy Crush - Juicy`.
-- `privacy-en.html` - EN privacy policy.
+- `apps/candy-crush/index.html` - RU landing страница приложения `Candy Crush - Сочный матч`.
+- `apps/candy-crush/privacy.html` - RU политика конфиденциальности.
+- `apps/candy-crush/index-en.html` - EN landing страница приложения `Candy Crush - Juicy`.
+- `apps/candy-crush/privacy-en.html` - EN privacy policy.
 
 Файлы стилей и ассетов:
 
-- `styles.css`
-- `assets/icon_store.png`
-- `assets/feature_graph.png`
+- `apps/candy-crush/styles.css`
+- `apps/candy-crush/assets/icon_store.png`
+- `apps/candy-crush/assets/feature_graph.png`
 
 Перед публикацией проверьте и заполните:
 
 - юридическое наименование оператора;
-- контактный email в `privacy.html`;
-- контактный email в `privacy-en.html`;
-- фактическую ссылку на приложение в RuStore в `index.html`.
+- контактный email в `apps/candy-crush/privacy.html`;
+- контактный email в `apps/candy-crush/privacy-en.html`;
+- фактическую ссылку на приложение в RuStore в `apps/candy-crush/index.html`.
