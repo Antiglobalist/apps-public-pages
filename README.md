@@ -1,21 +1,22 @@
-# apps-public-pages
+# App Web Pages Hub
 
-Статические страницы для GitHub Pages:
+This repository hosts public GitHub Pages content for multiple mobile apps.
 
-- `apps/candy-crush/index.html` - RU landing страница приложения `Candy Crush - Сочный матч`.
-- `apps/candy-crush/privacy.html` - RU политика конфиденциальности.
-- `apps/candy-crush/index-en.html` - EN landing страница приложения `Candy Crush - Juicy`.
-- `apps/candy-crush/privacy-en.html` - EN privacy policy.
+## Candy Crush
 
-Файлы стилей и ассетов:
+### Page Files
+- `apps/candy-crush/index.html` - RU landing page (`Candy Crush - Сочный матч`)
+- `apps/candy-crush/privacy.html` - RU privacy policy
+- `apps/candy-crush/index-en.html` - EN landing page (`Candy Crush - Juicy`)
+- `apps/candy-crush/privacy-en.html` - EN privacy policy
 
+### Styles and Assets
 - `apps/candy-crush/styles.css`
 - `apps/candy-crush/assets/icon_store.png`
 - `apps/candy-crush/assets/feature_graph.png`
 
-Перед публикацией проверьте и заполните:
-
-- юридическое наименование оператора;
-- контактный email в `apps/candy-crush/privacy.html`;
-- контактный email в `apps/candy-crush/privacy-en.html`;
-- фактическую ссылку на приложение в RuStore в `apps/candy-crush/index.html`.
+### Pre-Publish Checklist
+- Verify data controller legal name
+- Verify contact email in `apps/candy-crush/privacy.html`
+- Verify contact email in `apps/candy-crush/privacy-en.html`
+- Replace placeholder RuStore URL in `apps/candy-crush/index.html`
