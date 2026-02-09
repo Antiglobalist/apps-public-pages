@@ -22,7 +22,4 @@ This repository hosts public GitHub Pages content for multiple mobile apps.
 - `apps/candy-crush/assets/feature_graph.png`
 
 ### Pre-Publish Checklist
-- Verify data controller legal name
-- Verify contact email in `apps/candy-crush/privacy.html`
-- Verify contact email in `apps/candy-crush/privacy-en.html`
 - Replace placeholder RuStore URL in `apps/candy-crush/index.html`
