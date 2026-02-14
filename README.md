@@ -23,3 +23,14 @@ This repository hosts public GitHub Pages content for multiple mobile apps.
 
 ### Pre-Publish Checklist
 - Replace placeholder RuStore URL in `apps/candy-crush/index.html`
+
+## Developer Profile Page
+
+### Page Files
+- `about-dev/index.html` - EN profile landing page
+- `about-dev/styles.css` - Styles for the profile page
+- `about-dev/assets/profile-placeholder.svg` - Fallback avatar image
+- `about-dev/assets/profile.jpg` - Optional custom photo (add this file to replace fallback)
+
+### Public URL
+- Profile page: https://antiglobalist.github.io/apps-public-pages/about-dev/
