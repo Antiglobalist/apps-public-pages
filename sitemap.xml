@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://antiglobalist.github.io/apps-public-pages/apps/candy-crush/</loc>
+    <lastmod>2026-02-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://antiglobalist.github.io/apps-public-pages/apps/candy-crush/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antiglobalist.github.io/apps-public-pages/apps/candy-crush/index-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antiglobalist.github.io/apps-public-pages/apps/candy-crush/"/>
+  </url>
+  <url>
+    <loc>https://antiglobalist.github.io/apps-public-pages/apps/candy-crush/index-en.html</loc>
+    <lastmod>2026-02-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://antiglobalist.github.io/apps-public-pages/apps/candy-crush/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antiglobalist.github.io/apps-public-pages/apps/candy-crush/index-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antiglobalist.github.io/apps-public-pages/apps/candy-crush/"/>
+  </url>
+  <url>
+    <loc>https://antiglobalist.github.io/apps-public-pages/apps/candy-crush/privacy.html</loc>
+    <lastmod>2026-02-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://antiglobalist.github.io/apps-public-pages/apps/candy-crush/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antiglobalist.github.io/apps-public-pages/apps/candy-crush/privacy-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antiglobalist.github.io/apps-public-pages/apps/candy-crush/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://antiglobalist.github.io/apps-public-pages/apps/candy-crush/privacy-en.html</loc>
+    <lastmod>2026-02-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://antiglobalist.github.io/apps-public-pages/apps/candy-crush/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antiglobalist.github.io/apps-public-pages/apps/candy-crush/privacy-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antiglobalist.github.io/apps-public-pages/apps/candy-crush/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://antiglobalist.github.io/apps-public-pages/about-dev/</loc>
+    <lastmod>2026-02-14</lastmod>
+  </url>
+</urlset>
