@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://antiglobalist.github.io/apps-public-pages/sitemap.xml
