@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Заказать органический мёд — WhatsApp, Telegram или форма | Пасека «Золотая Сота»</title>
+  <meta name="description" content="Оформите заказ в 1 минуту: WhatsApp/Telegram или заявка через форму. Доставка по России. Ответим быстро.">
+  <meta property="og:title" content="Заказать мёд — Пасека «Золотая Сота»">
+  <meta property="og:description" content="Быстрый заказ через мессенджер или форму. Доставка по России.">
+  <meta property="og:url" content="https://antiglobalist.github.io/apps-public-pages/honey/order.html">
+  <link rel="canonical" href="https://antiglobalist.github.io/apps-public-pages/honey/order.html">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo"><span>&#127855;</span> Золотая Сота</a>
+      <button class="nav-toggle" aria-label="Меню">&#9776;</button>
+      <nav class="nav">
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="about.html">О пасеке</a>
+        <a href="delivery.html">Доставка</a>
+        <a href="order.html" class="btn btn-primary btn-sm active">Заказать</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <h1>Оформить заказ</h1>
+    <p>Выберите удобный способ — ответим быстро</p>
+  </section>
+
+  <!-- Messenger Order -->
+  <section class="section">
+    <div class="container">
+      <div class="messenger-block fade-in">
+        <h2>Быстрый заказ в мессенджере</h2>
+        <p>Если вам удобно — нажмите кнопку, и мы продолжим в чате. Уточним сорт, объём, адрес и доставку.</p>
+        <div class="cta-buttons">
+          <a href="https://wa.me/79991234567?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%20%D0%BC%D1%91%D0%B4." class="btn btn-whatsapp" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://t.me/zolotayasota" class="btn btn-telegram" target="_blank" rel="noopener">Telegram</a>
+        </div>
+        <p class="messenger-hint">Сообщение можно отправить в свободной форме: «Хочу разнотравье 2&times;500 г, доставка в Казань».</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Form Order -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-title fade-in">Заявка через форму</h2>
+      <p style="text-align:center; color: var(--text-light); margin-bottom: 32px;">Оставьте контакт — мы ответим на e-mail и при необходимости уточним детали по телефону.</p>
+      <div class="form-section fade-in">
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <!-- Honeypot -->
+          <div class="ohnohoney">
+            <label for="honey-name">Не заполняйте</label>
+            <input type="text" id="honey-name" name="_gotcha" tabindex="-1" autocomplete="off">
+          </div>
+
+          <div class="form-group">
+            <label for="name">Имя *</label>
+            <input type="text" id="name" name="name" required placeholder="Как вас зовут?">
+          </div>
+          <div class="form-group">
+            <label for="phone">Телефон *</label>
+            <input type="tel" id="phone" name="phone" required placeholder="+7 (___) ___-__-__">
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail *</label>
+            <input type="email" id="email" name="email" required placeholder="mail@example.com">
+          </div>
+          <div class="form-group">
+            <label for="city">Город / регион</label>
+            <input type="text" id="city" name="city" placeholder="Куда доставить?">
+          </div>
+          <div class="form-group">
+            <label for="product">Что хотите заказать?</label>
+            <select id="product" name="product">
+              <option value="">Выберите...</option>
+              <option value="Липовый мёд">Липовый мёд</option>
+              <option value="Гречишный мёд">Гречишный мёд</option>
+              <option value="Разнотравье">Разнотравье (луговой)</option>
+              <option value="Крем-мёд">Крем-мёд</option>
+              <option value="Набор / подарок">Набор / подарок</option>
+              <option value="Другое">Другое (напишу в комментарии)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="comment">Комментарий</label>
+            <textarea id="comment" name="comment" placeholder="Объём, количество, пожелания..."></textarea>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" id="consent" name="consent" required>
+            <label for="consent">Я согласен(на) на обработку персональных данных и ознакомлен(а) с <a href="privacy.html" target="_blank">Политикой конфиденциальности</a>.</label>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%; justify-content: center;">Отправить заявку</button>
+        </form>
+        <p style="text-align:center; margin-top: 20px; color: var(--text-light); font-size: 0.9rem;">Обычно отвечаем в течение рабочего дня. В сезон сбора — иногда быстрее :)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Золотая Сота</h4>
+          <p>Тёплый вкус лета — в каждой ложке.</p>
+        </div>
+        <div>
+          <h4>Навигация</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="about.html">О пасеке</a></li>
+            <li><a href="delivery.html">Доставка и оплата</a></li>
+            <li><a href="order.html">Заказать</a></li>
+          </ul>
+        </div>
+        <div class="footer-contacts">
+          <h4>Контакты</h4>
+          <p>&#128222; +7 999 123-45-67</p>
+          <p>&#128232; order@zolotayasota.ru</p>
+          <p>Telegram: <a href="https://t.me/zolotayasota" target="_blank" rel="noopener">@zolotayasota</a></p>
+          <p>Пн–Сб 10:00–19:00 (МСК)</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-disclaimer">Информация на сайте носит справочный характер и не является медицинской рекомендацией. Возможна индивидуальная непереносимость продуктов пчеловодства. Не рекомендуется давать мёд детям до 1 года.</p>
+        <p>&copy; 2026 Пасека «Золотая Сота» &middot; <a href="privacy.html">Политика конфиденциальности</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
