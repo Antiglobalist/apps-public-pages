@@ -1,0 +1,1 @@
+Brand reference provided by the user. anik-mark.svg is a scalable vector adaptation of the purple ribbon A, used in header, footer, favicon and live device illustrations. Previous concept snapshots intentionally preserve their original designs.

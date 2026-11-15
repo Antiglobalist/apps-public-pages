@@ -1,0 +1,117 @@
+/* Foundation icon system: consistent optical sizes, no font-dependent glyphs. */
+.icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
+  vertical-align: middle;
+}
+.site-header nav a:last-child,
+.site-footer > a:last-child {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.site-header .icon,
+.site-footer .icon { width: 16px; height: 16px; }
+.layer-symbol { display: flex; }
+.layer-symbol .icon { width: 25px; height: 25px; }
+.preview-check { display: grid; place-items: center; flex-shrink: 0; }
+.preview-check .icon { width: 16px; height: 16px; }
+.logic-flow > .icon { width: 16px; height: 16px; }
+.discipline-icon .icon { width: 32px; height: 32px; }
+.ai-symbol .icon { width: 36px; height: 36px; }
+.practice-strip .wrap > span { display: inline-flex; align-items: center; gap: 12px; }
+.practice-strip span::before { content: none; }
+.practice-strip .icon { color: var(--blue); width: 19px; height: 19px; }
+
+/* Restrained professional motion: a single entrance, then user-driven feedback.
+   Base styles always show the full page, including without JavaScript. */
+:root {
+  --motion-ease: cubic-bezier(.2, 0, 0, 1);
+  --motion-quick: 160ms;
+  --motion-standard: 360ms;
+  --motion-slow: 560ms;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero-copy {
+    animation: hero-arrive var(--motion-slow) var(--motion-ease) both;
+  }
+  .architecture.is-visible .layer-foundation {
+    animation: layer-arrive var(--motion-standard) var(--motion-ease) both;
+  }
+  .architecture.is-visible .layer-logic {
+    animation: layer-arrive var(--motion-standard) var(--motion-ease) 120ms both;
+  }
+  .architecture.is-visible .layer-interface {
+    animation: layer-arrive var(--motion-standard) var(--motion-ease) 240ms both;
+  }
+  .architecture.is-visible .preview-bars i {
+    transform-origin: center bottom;
+    animation: chart-grow var(--motion-slow) var(--motion-ease) 400ms both;
+  }
+  .architecture.is-visible .preview-check path {
+    stroke-dasharray: 24;
+    animation: check-draw var(--motion-standard) var(--motion-ease) 740ms both;
+  }
+  .architecture.is-visible .tiny-mark {
+    animation: status-settle 900ms ease-in-out 400ms 2;
+  }
+  .button {
+    transition: background var(--motion-quick),
+      transform var(--motion-quick) var(--motion-ease),
+      box-shadow var(--motion-standard) var(--motion-ease);
+  }
+  .button .icon,
+  .site-header .icon-arrow,
+  .site-footer .icon-arrow {
+    transition: transform var(--motion-standard) var(--motion-ease);
+  }
+  .button:active { transform: translateY(1px) scale(.98); }
+  .button:focus-visible .icon-arrow,
+  .site-header a:focus-visible .icon-arrow,
+  .site-footer a:focus-visible .icon-arrow { transform: translate(2px, -2px); }
+  @media (hover: hover) and (pointer: fine) {
+    .button:hover { transform: translateY(-2px); box-shadow: 0 6px 16px #244cce24; }
+    .button:hover .icon-telegram { transform: translate(2px, -2px) rotate(-5deg); }
+    .button:hover .icon-arrow,
+    .site-header a:hover .icon-arrow,
+    .site-footer a:hover .icon-arrow { transform: translate(2px, -2px); }
+    .button:active { transform: translateY(1px) scale(.98); box-shadow: none; }
+  }
+}
+@keyframes hero-arrive {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes layer-arrive {
+  /* Individual translate preserves the diagram's existing layer rotations. */
+  from { opacity: 0; translate: 0 14px; }
+  to { opacity: 1; translate: 0 0; }
+}
+@keyframes chart-grow {
+  from { transform: scaleY(.15); }
+  to { transform: scaleY(1); }
+}
+@keyframes check-draw {
+  from { stroke-dashoffset: 24; }
+  to { stroke-dashoffset: 0; }
+}
+@keyframes status-settle {
+  0%, 100% { box-shadow: 0 0 0 0 #244cce00; }
+  45% { box-shadow: 0 0 0 5px #244cce15; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+@media (max-width: 700px) {
+  .site-header nav a:first-child,
+  .site-header nav a:nth-child(2) { display: none; }
+  .site-header nav a:last-child { display: inline-flex; }
+  .practice-strip .wrap > span { gap: 7px; }
+  .practice-strip .icon { width: 16px; height: 16px; }
+}
+@media (max-width: 380px) {
+  .logic-flow > .icon { width: 12px; height: 12px; }
+}
