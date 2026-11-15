@@ -1,0 +1,49 @@
+:root {
+  --ease-out: cubic-bezier(.2, .7, .2, 1);
+  --time-fast: 160ms;
+  --time-standard: 360ms;
+  --time-slow: 620ms;
+}
+
+/* Progressive enhancement: content is visible before JS and without motion. */
+@media (prefers-reduced-motion: no-preference) {
+  html:not([data-motion='reduced']) .hero-copy { animation: arrive var(--time-slow) var(--ease-out) both; }
+  html:not([data-motion='reduced']) [data-reveal].is-seen { animation: arrive var(--time-slow) var(--ease-out) both; }
+  html:not([data-motion='reduced']) .product-map.is-seen .backend-node { animation: arrive 420ms var(--ease-out) both; }
+  html:not([data-motion='reduced']) .product-map.is-seen .client-nodes { animation: arrive 500ms var(--ease-out) 150ms both; }
+  html:not([data-motion='reduced']) .product-map.is-seen .connector-tree { animation: connect 450ms var(--ease-out) 80ms both; transform-origin: top; }
+  html:not([data-motion='reduced']) .product-map.is-seen .map-dot { animation: signal 900ms ease-in-out 400ms 2; }
+  .button, .bento, .work-art, .text-link .icon, .nav-contact .icon, .work-art > img, .contact-arrow {
+    transition: transform var(--time-standard) var(--ease-out), box-shadow var(--time-standard) var(--ease-out), background var(--time-fast), border-color var(--time-fast);
+  }
+  .button:active { transform: scale(.98); }
+  .button:focus-visible .icon { transform: translate(2px, -2px); }
+  @media (hover: hover) and (pointer: fine) {
+    html:not([data-motion='reduced']) .button:hover { transform: translateY(-2px); box-shadow: 0 8px 20px #4d55dc25; }
+    html:not([data-motion='reduced']) .button:active { transform: translateY(0) scale(.98); }
+    html:not([data-motion='reduced']) .bento:hover { transform: translateY(-3px); border-color: #c4cbe0; box-shadow: 0 10px 28px #26345408; }
+    html:not([data-motion='reduced']) .text-link:hover .icon, html:not([data-motion='reduced']) .nav-contact:hover .icon { transform: translate(2px, -2px); }
+    html:not([data-motion='reduced']) .hero-actions .text-link:hover .icon { transform: translateY(3px); }
+    html:not([data-motion='reduced']) .work-row:hover .work-art > img { transform: translateY(-3px); }
+    html:not([data-motion='reduced']) .contact-section:hover .contact-arrow { transform: rotate(-3deg); }
+  }
+}
+@keyframes arrive {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes connect {
+  from { opacity: .3; transform: scaleY(.6); }
+  to { opacity: 1; transform: scaleY(1); }
+}
+@keyframes signal {
+  0%, 100% { box-shadow: 0 0 0 0 #4d55dc00; }
+  45% { box-shadow: 0 0 0 5px #4d55dc18; }
+}
+html[data-motion='reduced'] { scroll-behavior: auto; }
+html[data-motion='reduced'] *, html[data-motion='reduced'] *::before, html[data-motion='reduced'] *::after { animation: none !important; transition: none !important; }
+html[data-motion='reduced'] .button:active, html[data-motion='reduced'] .button:focus-visible .icon { transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
