@@ -10,7 +10,7 @@ Run from the repository root:
 python3 -m http.server 8765 --bind 127.0.0.1
 ```
 
-Open `http://127.0.0.1:8765/about-dev/`.
+Open `http://127.0.0.1:8765/about-dev/` for English or `http://127.0.0.1:8765/about-dev/ru/` for Russian.
 
 ## Design and implementation
 
@@ -31,7 +31,7 @@ The current design includes:
 
 ## Files
 
-- `index.html`: semantic sections, content and inline SVGs.
+- `index.html` and `ru/index.html`: English and Russian HTML with shared styles, assets, and section IDs.
 - `styles.css`: complete responsive design system, 850px tablet and 600px mobile composition changes.
 - `motion.css`: isolated motion definitions with reduced-motion overrides.
 - `motion.js`: navigation and progressive motion enhancements.
@@ -52,4 +52,6 @@ Changes are submitted through a pull request; publishing follows the repositoryâ
 
 ## Localization and branding
 
-The header offers EN / RU switching through `i18n.js`, with a persisted language choice. Page content, metadata and accessible labels are translated; the Geo Transit screenshots retain their original interface language. The ribbon-A identity is used in the header, footer, favicon and device artwork. PNG icons, Apple Touch Icon, Safari mask icon and web manifest are included. Generated illustration sources and prompt notes are in `assets/illustrations/`.
+The EN and RU links navigate to separate URLs. Each page serves localized content, metadata and accessible labels in its initial HTML. Both use self-referencing canonicals, reciprocal `hreflang`, and entries in the repository sitemap. Design concepts use `noindex`.
+
+The Geo Transit screenshots retain their original interface language. The ribbon-A identity is used in the header, footer, favicon and device artwork. PNG icons, Apple Touch Icon, Safari mask icon and web manifest are included. Generated illustration sources and prompt notes are in `assets/illustrations/`.

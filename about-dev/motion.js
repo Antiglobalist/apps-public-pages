@@ -1,7 +1,6 @@
 (() => {
   'use strict';
   const root = document.documentElement;
-  const t = (text) => window.anikTranslate?.(text) || text;
   root.classList.add('has-js');
 
   // An inline disclosure menu keeps the rest of the page available to keyboards.
@@ -9,14 +8,16 @@
   const nav = document.querySelector('.site-nav');
   const mobile = window.matchMedia('(max-width: 600px)');
   if (menu && nav) {
+    const label = menu.querySelector('.menu-label');
+    const openLabel = menu.getAttribute('aria-label');
+    const openText = label.textContent;
     menu.hidden = false;
     const setMenu = (open) => {
       nav.classList.toggle('is-open', open);
       menu.setAttribute('aria-expanded', String(open));
-      menu.setAttribute('aria-label', t(open ? 'Close navigation' : 'Open navigation'));
-      menu.querySelector('.menu-label').textContent = t(open ? 'Close' : 'Menu');
+      menu.setAttribute('aria-label', open ? menu.dataset.closeLabel : openLabel);
+      label.textContent = open ? menu.dataset.closeText : openText;
     };
-    document.addEventListener('anik-language-change', () => setMenu(menu.getAttribute('aria-expanded') === 'true'));
     setMenu(false);
     menu.addEventListener('click', () => setMenu(menu.getAttribute('aria-expanded') !== 'true'));
     nav.addEventListener('click', (event) => {
@@ -44,10 +45,7 @@
     mobile.addEventListener('change', () => setMenu(false));
   }
 
-  // Motion is opt-out both through the OS preference and the local page control.
   const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const motionButton = document.querySelector('.motion-toggle');
-  let manuallyReduced = false;
   const seen = new WeakSet();
   const targets = [...document.querySelectorAll('[data-reveal], .product-map')];
   const observer = 'IntersectionObserver' in window ? new IntersectionObserver((entries) => {
@@ -60,15 +58,8 @@
   }, { threshold: 0.12 }) : null;
 
   const syncMotion = () => {
-    const reduced = preference.matches || manuallyReduced;
+    const reduced = preference.matches;
     root.dataset.motion = reduced ? 'reduced' : 'full';
-    if (motionButton) {
-      motionButton.hidden = false;
-      motionButton.setAttribute('aria-pressed', String(reduced));
-      motionButton.textContent = t(reduced ? 'Reduced motion' : 'Reduce motion');
-      motionButton.disabled = preference.matches;
-      motionButton.title = t(preference.matches ? 'Reduced motion follows your system preference' : 'Toggle page animations');
-    }
     observer?.disconnect();
     for (const target of targets) {
       if (reduced || !observer) {
@@ -79,11 +70,6 @@
       }
     }
   };
-  motionButton?.addEventListener('click', () => {
-    manuallyReduced = !manuallyReduced;
-    syncMotion();
-  });
   preference.addEventListener('change', syncMotion);
-  document.addEventListener('anik-language-change', syncMotion);
   syncMotion();
 })();
