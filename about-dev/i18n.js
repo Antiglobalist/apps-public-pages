@@ -35,27 +35,11 @@ const ru = {
   "Automated testing": "Автотесты",
   "Modernization": "Модернизация",
   "Performance": "Производительность",
-  "Products, in perspective.": "Продукты в деталях.",
-  "Real case studies are on the way. These third-party previews show the presentation format, not my projects.": "Реальные кейсы скоро появятся. Пока здесь сторонние приложения — примеры оформления, а не мои работы.",
-  "Reference preview": "Пример оформления",
-  "Loop Habit Tracker · Third-party application": "Loop Habit Tracker · Стороннее приложение",
-  "Mobile product / Reference": "Мобильный продукт / Пример",
-  "Small habits.": "Маленькие привычки.",
-  "A daily experience.": "Каждый день.",
-  "Loop Habit Tracker is an open-source Android app for building and tracking habits. Its real screens are used here as a temporary visual reference.": "Loop Habit Tracker — Android-приложение с открытым кодом для формирования и отслеживания привычек. Его экраны временно используются как пример оформления.",
-  "Application": "Приложение",
-  "Platform": "Платформа",
+  "Selected projects": "Избранные проекты",
+  "Public transport for Batumi, Kutaisi, and Zugdidi. See buses on the map in real time, check upcoming arrivals, and plan a trip.": "Общественный транспорт Батуми, Кутаиси и Зугдиди. Автобусы на карте в реальном времени, время прибытия на остановку и планирование поездок.",
   "Platforms": "Платформы",
-  "My role": "Моя роль",
-  "None — reference only": "Не участвовал — только пример",
-  "View original project": "Открыть оригинальный проект",
-  "Joplin · Third-party application": "Joplin · Стороннее приложение",
-  "Connected product / Reference": "Мультиплатформенный продукт / Пример",
-  "One workspace.": "Единое пространство.",
-  "Across devices.": "На всех устройствах.",
-  "Joplin brings notes to desktop and mobile. This official product visual demonstrates how a connected product can be presented here.": "Joplin объединяет заметки на компьютере и телефоне. Официальная иллюстрация показывает, как можно представить мультиплатформенный продукт.",
-  "Desktop, Android & iOS": "Компьютер, Android и iOS",
-  "View original product": "Открыть сайт продукта",
+  "Android, iOS & web": "Android, iOS и веб",
+  "Visit the Geo Transit website": "Открыть сайт Geo Transit",
   "AI-assisted engineering": "Разработка с ИИ",
   "AI makes it faster.": "ИИ ускоряет работу.",
   "Engineering makes it": "Инженерный подход даёт",
@@ -107,17 +91,15 @@ const ru = {
   "Open navigation": "Открыть меню",
   "Close navigation": "Закрыть меню",
   "Main navigation": "Основная навигация",
-  "Anik Apps home": "Anik Apps — главная",
+  "Antik Apps home": "Antik Apps — главная",
   "Reduce motion": "Уменьшить анимацию",
   "Reduced motion": "Анимация уменьшена",
   "Toggle page animations": "Переключить анимации страницы",
   "Reduced motion follows your system preference": "Анимация отключена в настройках системы",
   "One connected product: mobile apps, Wear OS, backend, analytics and payments": "Единый продукт: приложения, Wear OS, сервер, аналитика и платежи",
   "Pixel-style phone and round smartwatch on a glass podium, surrounded by product and backend panels": "Смартфон Pixel и круглые часы на стеклянном подиуме, окружённые карточками продукта и сервера",
-  "Loop habit detail in an illustrative iPhone-style frame; not an iOS release": "Экран привычки Loop в демонстрационной рамке iPhone; это не версия для iOS",
-  "Loop Habit Tracker Android screen in a Pixel-style frame": "Android-приложение Loop Habit Tracker в рамке Pixel",
-  "Joplin desktop application on a laptop": "Приложение Joplin на ноутбуке",
-  "Joplin mobile notes in an illustrative iPhone frame": "Мобильные заметки Joplin в демонстрационной рамке iPhone",
+  "Live map of buses and stops in Batumi on Android": "Карта Батуми с автобусами и остановками в приложении для Android",
+  "Bus trip options in the journey planner on iPhone": "Варианты поездки на автобусе в планировщике маршрутов на iPhone",
   "AI-assisted development process": "Процесс разработки с ИИ"
 };
 const root = document.documentElement;
@@ -145,8 +127,8 @@ function setLanguage(language, persist=false) {
  const russian=root.lang==='ru';
  for(const item of translations) item.node.nodeValue=russian?item.translated:item.original;
  for(const item of attributes) item.el.setAttribute(item.name,russian?ru[item.value]:item.value);
- document.title=russian?'Anik Apps — От идеи до запуска':'Anik Apps — From idea to production';
- description.content=russian?'Anik Apps — разработка продуктов с нуля. Более 10 лет опыта: сервер, Android, iOS, Telegram, Wear OS, аналитика, платежи и запуск.':englishDescription;
+ document.title=russian?'Antik Apps — От идеи до запуска':'Antik Apps — From idea to production';
+ description.content=russian?'Antik Apps — разработка продуктов с нуля. Более 10 лет опыта: сервер, Android, iOS, Telegram, Wear OS, аналитика, платежи и запуск.':englishDescription;
  for(const button of document.querySelectorAll('[data-language]')) button.setAttribute('aria-pressed',String(button.dataset.language===root.lang));
  document.querySelector('.language-switch').setAttribute('aria-label',russian?'Язык сайта':'Website language');
  if(persist) {try {localStorage.setItem('anik-language',root.lang);} catch { /* Storage can be unavailable in private mode. */ }}

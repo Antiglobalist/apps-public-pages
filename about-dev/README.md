@@ -1,4 +1,4 @@
-# Anik Apps portfolio
+# Antik Apps portfolio
 
 Static HTML, CSS and a small progressive-enhancement script. No application framework, build tool, package dependencies or third-party JavaScript is required.
 
@@ -22,7 +22,7 @@ The current design includes:
 
 - Value-led hero with primary Telegram contact, secondary work navigation and an illustrated 3D device composition. No fabricated product metrics.
 - Four service cards with different dimensions and visual treatments: mobile, backend, launch, engineering.
-- Alternating project-reference layouts for phone screenshots and a desktop/mobile composition.
+- A Geo Transit portfolio entry with real Android and iPhone screenshots and a link to the official site.
 - Compact requirements → agents → engineering review → production workflow.
 - Experience section limited to supplied facts (10+ years development, 7+ remote, developer/tech lead, architecture, modernization, hiring).
 - Final contact and compact footer.
@@ -36,21 +36,13 @@ The current design includes:
 - `motion.css`: isolated motion definitions with reduced-motion overrides.
 - `motion.js`: navigation and progressive motion enhancements.
 - `assets/fonts/`: local Latin variable WOFF2 and SIL OFL license.
-- `assets/references/`: optimized third-party previews, credits and source documentation.
+- `assets/projects/geo-transit/`: screenshots from the Geo Transit project.
+- `assets/references/`: previews and credits for archived concepts.
 - `assets/favicon.svg`: small brand favicon.
 
-## Temporary project references — replacement required
+## Geo Transit
 
-The owner explicitly authorized third-party app screenshots until real projects are supplied. Loop and Joplin are labelled “Reference preview,” “Third-party application,” and “My role: None — reference only.” They are NOT represented as Anik Apps projects.
-
-Replace each complete `article[data-project]` in `index.html` when real material is available:
-
-1. Title, project type, description and actual development role.
-2. Platform / technology metadata and verified original product or repository URL.
-3. Optimized images, intrinsic width/height and accurate alternative text.
-4. Remove the temporary-reference labels only when the card describes a verified owner project.
-
-Credits and source URLs are recorded in `assets/references/SOURCES.md`. Do not replace those with invented portfolio metrics or client claims. Candy Crush project materials exist elsewhere in this repository but were not assumed to establish a full development role.
+The Android live map and iPhone journey planner screenshots come from the official Geo Transit landing page assets in the `georgia-transit-mobile` repository, commit `dbca6ef`. The project card links to [the Geo Transit website](https://www.geotransit.com.ge/).
 
 ## Validation
 
@@ -60,4 +52,4 @@ Changes are submitted through a pull request; publishing follows the repository�
 
 ## Localization and branding
 
-The header offers EN / RU switching through `i18n.js`, with a persisted language choice. Page content, metadata and accessible labels are translated; text embedded in illustrations and reference screenshots remains English. The ribbon-A identity is used in the header, footer, favicon and device artwork. PNG icons, Apple Touch Icon, Safari mask icon and web manifest are included. Generated illustration sources and prompt notes are in `assets/illustrations/`.
+The header offers EN / RU switching through `i18n.js`, with a persisted language choice. Page content, metadata and accessible labels are translated; the Geo Transit screenshots retain their original interface language. The ribbon-A identity is used in the header, footer, favicon and device artwork. PNG icons, Apple Touch Icon, Safari mask icon and web manifest are included. Generated illustration sources and prompt notes are in `assets/illustrations/`.

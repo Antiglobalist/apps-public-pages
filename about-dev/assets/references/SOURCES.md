@@ -1,6 +1,6 @@
 # Temporary third-party project references
 
-These images are authorized by the site owner for local design previews. They are clearly labelled as references on the page and do not represent Anik Apps projects, clients, contributions, or results. Replace the entire project card with verified owner material before using it as a portfolio case study.
+These images are authorized by the site owner for local design previews. They are clearly labelled as references on the page and do not represent Antik Apps projects, clients, contributions, or results. Replace the entire project card with verified owner material before using it as a portfolio case study.
 
 ## Loop Habit Tracker
 

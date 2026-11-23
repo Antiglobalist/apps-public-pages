@@ -1,4 +1,4 @@
-# Anik Apps design concepts
+# Antik Apps design concepts
 
 Local review only. No deployment or commits were made.
 
