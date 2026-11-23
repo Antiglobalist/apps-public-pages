@@ -654,7 +654,7 @@ img { display: block; max-width: 100%; height: auto; }
 @media(max-width:850px) { .experience-highlights li { flex-direction: row; } .contact-section { grid-template-columns: 1fr 1fr; } .contact-product-art { height: 260px; } .contact-platform { font-size: 9px; padding: 6px 10px; } }
 @media(max-width:600px) { .about-section { padding-bottom: 32px; } .experience-highlights { gap: 10px; margin-top: 25px; } .experience-highlights li { flex-direction: column; gap: 7px; } .experience-highlights li + li { padding-left: 10px; } .experience-numbers { gap: 12px; } .experience-numbers > div { padding: 18px 14px; } .experience-numbers strong { font-size: 45px; } .experience-numbers > div > .stat-icon { width: 28px; height: 28px; right: 10px; top: 12px; } .stat-icon .icon { width: 17px; height: 17px; } .experience-numbers > div > span { font-size: 11px; } .contact-section { padding: 30px 25px 15px; } .contact-copy h2 { font-size: 42px; } .contact-product-art { height: 260px; margin-top: 26px; } .contact-actions { gap: 14px; } }
 
-/* Anik Apps ribbon-A brand, adapted from the supplied identity board. */
+/* Antik Apps ribbon-A brand, adapted from the supplied identity board. */
 .brand { gap: 13px; }
 .brand-logo { width: 46px; height: 40px; object-fit: contain; flex-shrink: 0; }
 .brand-wordmark { display: flex; flex-direction: column; justify-content: center; border-left: 1px solid #cecae3; padding-left: 13px; line-height: 1.15; font-size: 23px; font-weight: 750; letter-spacing: -.045em; }

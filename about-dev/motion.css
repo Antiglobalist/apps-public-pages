@@ -13,7 +13,7 @@
   html:not([data-motion='reduced']) .product-map.is-seen .client-nodes { animation: arrive 500ms var(--ease-out) 150ms both; }
   html:not([data-motion='reduced']) .product-map.is-seen .connector-tree { animation: connect 450ms var(--ease-out) 80ms both; transform-origin: top; }
   html:not([data-motion='reduced']) .product-map.is-seen .map-dot { animation: signal 900ms ease-in-out 400ms 2; }
-  .button, .bento, .work-art, .text-link .icon, .nav-contact .icon, .work-art > img, .contact-arrow {
+  .button, .bento, .text-link .icon, .nav-contact .icon, .contact-arrow {
     transition: transform var(--time-standard) var(--ease-out), box-shadow var(--time-standard) var(--ease-out), background var(--time-fast), border-color var(--time-fast);
   }
   .button:active { transform: scale(.98); }
@@ -24,7 +24,6 @@
     html:not([data-motion='reduced']) .bento:hover { transform: translateY(-3px); border-color: #c4cbe0; box-shadow: 0 10px 28px #26345408; }
     html:not([data-motion='reduced']) .text-link:hover .icon, html:not([data-motion='reduced']) .nav-contact:hover .icon { transform: translate(2px, -2px); }
     html:not([data-motion='reduced']) .hero-actions .text-link:hover .icon { transform: translateY(3px); }
-    html:not([data-motion='reduced']) .work-row:hover .work-art > img { transform: translateY(-3px); }
     html:not([data-motion='reduced']) .contact-section:hover .contact-arrow { transform: rotate(-3deg); }
   }
 }

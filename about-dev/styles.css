@@ -167,63 +167,38 @@ img { display: block; max-width: 100%; height: auto; }
 .quality-shield .icon { width: 38px; height: 38px; }
 .quality-visual > span { font-size: 9px; color: #526c60; }
 
-/* Reference work: real screenshots, explicitly not the developer's case studies. */
+/* Selected projects */
 .work-section { padding-top: 12px; }
 .work-row { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 64px; align-items: center; margin-top: 34px; }
-.work-row + .work-row { margin-top: 56px; }
-.work-art { position: relative; min-width: 0; border-radius: 20px; height: 400px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
-.work-art-loop { background: #e5e7fa; height: 430px; }
-.reference-badge { position: absolute; top: 18px; left: 18px; z-index: 2; background: #ffffffdf; border: 1px solid #ffffff; color: #535a70; padding: 5px 10px; font-size: 10px; border-radius: 6px; }
-/* CSS device mockups: compact Dynamic Island and Pixel punch-hole camera.
-   Crop only the old screenshot's system bars; keep the source image intact. */
-.phone-pair { position: relative; width: 340px; height: 370px; margin-top: 0; }
-.work-phone { position: absolute; width: 166px; height: 344px; padding: 4px; border: 1px solid #8b8e95; border-radius: 30px; background: #c6c7cc; box-shadow: inset 0 0 0 1px #efeff1, 0 16px 25px #252c4b25; }
-.work-phone-back { left: 4px; top: 15px; transform: rotate(-9deg); }
-.work-phone-front { right: 0; top: 0; transform: rotate(8deg); }
-.phone-screen { position: relative; width: 100%; height: 100%; overflow: hidden; border: 3px solid #131417; border-radius: 25px; background: #fafafa; }
-.phone-camera { position: absolute; z-index: 3; top: 7px; left: 50%; transform: translateX(-50%); background: #101114; }
-.phone-iphone .phone-camera { width: 39px; height: 12px; border-radius: 9px; }
-.phone-iphone .phone-camera::after { content: ''; position: absolute; right: 5px; top: 4px; width: 4px; height: 4px; border-radius: 50%; background: #242c40; box-shadow: inset 0 0 0 1px #151c2c; }
-.phone-pixel { background: #b3b8ae; border-color: #858d80; box-shadow: inset 0 0 0 1px #e1e5db, 0 16px 25px #252c4b25; border-radius: 26px; }
-.phone-pixel .phone-screen { border-radius: 21px; }
-.phone-pixel .phone-camera { width: 8px; height: 8px; top: 9px; border: 2px solid #111318; border-radius: 50%; background: #263047; }
-.phone-status { height: 29px; display: flex; align-items: center; justify-content: space-between; padding: 0 12px; font-size: 6px; font-weight: 750; line-height: 1; color: #17191d; }
-.phone-status-icons { display: flex; align-items: end; gap: 3px; }
-.phone-signal { width: 7px; height: 5px; background: linear-gradient(to right, #17191d 0 20%, transparent 20% 30%, #17191d 30% 50%, transparent 50% 60%, #17191d 60% 80%, transparent 80% 90%, #17191d 90%); clip-path: polygon(0 70%, 30% 70%, 30% 40%, 60% 40%, 60% 20%, 90% 20%, 90% 0, 100% 0, 100% 100%, 0 100%); }
-.phone-battery { width: 10px; height: 5px; border: 1px solid #17191d; border-radius: 1.5px; background: #17191d; box-shadow: inset -2px 0 0 #fafafa; }
-.phone-app { position: absolute; top: 29px; bottom: 14px; left: 0; right: 0; overflow: hidden; background: #fafafa; }
-.phone-app img { position: absolute; top: -3.33%; left: 0; width: 100%; height: 111%; max-width: none; object-fit: fill; }
-.phone-home-indicator { position: absolute; bottom: 5px; left: 50%; width: 49px; height: 2px; transform: translateX(-50%); background: #17191d; border-radius: 3px; }
-.phone-pixel .phone-home-indicator { width: 37px; }
-.phone-side-button { position: absolute; right: -2px; top: 76px; width: 2px; height: 30px; border-radius: 2px; background: #96999f; }
-.phone-iphone::before { content: ''; position: absolute; left: -2px; top: 64px; width: 2px; height: 40px; border-radius: 2px; background: #96999f; }
-.phone-pixel .phone-side-button { background: #7d8478; top: 64px; height: 23px; box-shadow: 0 35px 0 #7d8478; }
-.art-credit { position: absolute; bottom: 14px; left: 18px; right: 18px; font-size: 9px; color: #4e5770; text-align: center; background: #e5e7fae6; border-radius: 4px; padding: 3px; }
-.project-type { font-size: 11px; font-weight: 650; color: var(--accent); margin-bottom: 15px; }
+.work-art {
+  --work-screen-width: 166px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(12px, 3vw, 28px);
+  min-width: 0;
+  min-height: 430px;
+  border: 1px solid #dfe4f5;
+  border-radius: 20px;
+  background: linear-gradient(140deg, #eef1ff, #e3e9fa 60%, #e3e7f8);
+}
+.work-art img {
+  display: block;
+  width: min(39%, var(--work-screen-width));
+  height: auto;
+  border: 4px solid #252b3c;
+  border-radius: 9% / 4.2%;
+  box-shadow: 0 12px 24px #252c4b30;
+}
+.work-art img:first-child { margin-bottom: 16px; }
+.work-art img + img { margin-top: 16px; }
 .work-copy h3 { font-size: 35px; letter-spacing: -.045em; line-height: 1.2; }
-.work-copy > p:not(.project-type) { font-size: 14px; margin-top: 20px; max-width: 400px; line-height: 1.8; }
-.project-meta { margin-block: 24px; display: grid; gap: 9px; }
-.project-meta div { display: flex; gap: 15px; font-size: 11px; }
-.project-meta dt { width: 83px; flex-shrink: 0; color: var(--muted); }
-.project-meta dd { margin: 0; color: #3a4357; }
-.work-row-reverse { grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); }
-.work-row-reverse .work-art { grid-column: 2; grid-row: 1; }
-.work-row-reverse .work-copy { grid-column: 1; grid-row: 1; }
-.work-art-joplin { background: #e7efed; }
-/* Reuse the original reference through CSS viewports; its pixels stay intact. */
-.joplin-devices { position: relative; width: 93%; aspect-ratio: 1440 / 878; margin-top: 18px; container-type: inline-size; }
-.joplin-laptop { width: 100%; height: 100%; clip-path: polygon(0 0, 100% 0, 100% 100%, 25.5% 100%, 25.5% 32%, 0 32%); }
-.joplin-iphone { left: 0; bottom: 0; width: 26%; height: 86%; padding: .65cqw; border-radius: 5cqw; box-shadow: inset 0 0 0 1px #efeff1, 0 1.5cqw 2cqw #17252130; }
-.joplin-iphone .phone-screen { border-width: .5cqw; border-radius: 4.2cqw; }
-.joplin-iphone .phone-status { height: 5.2cqw; padding: 0 1.7cqw; font-size: 1cqw; }
-.joplin-iphone .phone-camera { top: 1.2cqw; width: 6.7cqw; height: 2cqw; }
-.joplin-iphone .phone-camera::after { width: .65cqw; height: .65cqw; top: .65cqw; right: .85cqw; }
-.joplin-iphone .phone-status-icons { transform: scale(.7); transform-origin: right center; gap: 2px; }
-.joplin-iphone .phone-home-indicator { width: 8cqw; bottom: .8cqw; height: .4cqw; }
-.joplin-iphone .phone-side-button { top: 13cqw; height: 5cqw; }
-.joplin-iphone::before { top: 11cqw; height: 7cqw; }
-.joplin-mobile-screen { position: absolute; top: 5.2cqw; bottom: 2.4cqw; left: 0; right: 0; background: url('assets/references/joplin-apps.webp') 3.06% 86.01% / 489.8% 179.2% no-repeat; }
-.work-art-joplin .art-credit { background: #e7efede6; }
+.work-copy > p { font-size: 16px; margin-top: 16px; max-width: 400px; }
+.project-meta { margin-block: 20px; }
+.project-meta div { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 14px; }
+.project-meta dt { color: var(--muted); }
+.project-meta dd { margin: 0; color: #3a4357; font-weight: 650; }
+.work-copy .text-link { font-size: 14px; }
 
 /* Engineering workflow */
 .ai-section { background: var(--dark); color: #f8f9ff; padding-block: 76px; }
@@ -294,7 +269,7 @@ img { display: block; max-width: 100%; height: auto; }
   .bento-mobile .bento-content { width: 61%; }
   .quality-visual { min-width: 115px; transform: scale(.88); }
   .work-row { gap: 40px; }
-  .work-art { height: 370px; }
+  .work-art { --work-screen-width: 145px; min-height: 375px; }
   .work-copy h3 { font-size: 31px; }
   .workflow li { padding-inline: 18px; }
   .workflow h3 { font-size: 14px; }
@@ -333,13 +308,8 @@ img { display: block; max-width: 100%; height: auto; }
   .quality-shield { width: 70px; height: 70px; }
   .work-section { padding-top: 8px; }
   .work-row { gap: 28px; grid-template-columns: 1fr 1fr; }
-  .work-art { height: 355px; }
-  .phone-pair { transform: scale(.8); flex-shrink: 0; }
+  .work-art { --work-screen-width: 138px; min-height: 340px; }
   .work-copy h3 { font-size: 27px; }
-  .work-copy > p:not(.project-type) { font-size: 12px; }
-  .project-meta { margin-block: 18px; }
-  .project-meta div { font-size: 10px; gap: 8px; }
-  .project-meta dt { width: 68px; }
   .workflow { grid-template-columns: 1fr 1fr; }
   .workflow li { padding: 24px; }
   .workflow li:nth-child(3) { border-left: 0; }
@@ -425,18 +395,9 @@ img { display: block; max-width: 100%; height: auto; }
   .tags { margin-top: 20px; }
   .tags li { font-size: 10px; }
   .work-section { padding-top: 0; }
-  .work-row, .work-row-reverse { grid-template-columns: minmax(0, 1fr); gap: 24px; margin-top: 27px; }
-  .work-row + .work-row { margin-top: 40px; }
-  .work-row-reverse .work-art, .work-row-reverse .work-copy { grid-column: auto; grid-row: auto; }
-  .work-art { height: 330px; border-radius: 16px; }
-  .work-art-joplin { height: 265px; }
-  .phone-pair { transform: scale(.78); margin-top: 0; flex-shrink: 0; }
+  .work-row { grid-template-columns: minmax(0, 1fr); gap: 24px; margin-top: 24px; }
+  .work-art { --work-screen-width: 135px; min-height: 328px; border-radius: 16px; }
   .work-copy h3 { font-size: 29px; }
-  .work-copy > p:not(.project-type) { font-size: 13px; margin-top: 15px; }
-  .project-type { font-size: 10px; margin-bottom: 10px; }
-  .project-meta { margin-block: 19px; gap: 8px; }
-  .project-meta div { font-size: 11px; }
-  .project-meta dt { width: 80px; }
   .ai-section { padding-block: 48px; }
   .workflow { grid-template-columns: 1fr; margin-top: 28px; border-radius: 13px; }
   .workflow li { padding: 20px 23px 20px 62px; }
@@ -654,7 +615,7 @@ img { display: block; max-width: 100%; height: auto; }
 @media(max-width:850px) { .experience-highlights li { flex-direction: row; } .contact-section { grid-template-columns: 1fr 1fr; } .contact-product-art { height: 260px; } .contact-platform { font-size: 9px; padding: 6px 10px; } }
 @media(max-width:600px) { .about-section { padding-bottom: 32px; } .experience-highlights { gap: 10px; margin-top: 25px; } .experience-highlights li { flex-direction: column; gap: 7px; } .experience-highlights li + li { padding-left: 10px; } .experience-numbers { gap: 12px; } .experience-numbers > div { padding: 18px 14px; } .experience-numbers strong { font-size: 45px; } .experience-numbers > div > .stat-icon { width: 28px; height: 28px; right: 10px; top: 12px; } .stat-icon .icon { width: 17px; height: 17px; } .experience-numbers > div > span { font-size: 11px; } .contact-section { padding: 30px 25px 15px; } .contact-copy h2 { font-size: 42px; } .contact-product-art { height: 260px; margin-top: 26px; } .contact-actions { gap: 14px; } }
 
-/* Anik Apps ribbon-A brand, adapted from the supplied identity board. */
+/* Antik Apps ribbon-A brand, adapted from the supplied identity board. */
 .brand { gap: 13px; }
 .brand-logo { width: 46px; height: 40px; object-fit: contain; flex-shrink: 0; }
 .brand-wordmark { display: flex; flex-direction: column; justify-content: center; border-left: 1px solid #cecae3; padding-left: 13px; line-height: 1.15; font-size: 23px; font-weight: 750; letter-spacing: -.045em; }
@@ -691,7 +652,6 @@ html[lang="ru"] .brand-wordmark small { letter-spacing: .1em; }
 html[lang="ru"] .section-heading h2 { overflow-wrap: normal; }
 html[lang="ru"] .bento h3 { overflow-wrap: anywhere; }
 html[lang="ru"] .workflow li { min-height: 166px; }
-html[lang="ru"] .project-meta dt { width: 90px; }
 @media(max-width:850px) { html[lang="ru"] .hero h1 { font-size: clamp(43px,7vw,60px); } }
 @media(max-width:600px) { .header-inner { gap: 10px; } .language-switch { margin-left: auto; order: 0; } .language-switch button { min-width: 30px; min-height: 34px; } .site-nav { margin-left: 0; } html[lang="ru"] .hero h1 { font-size: 43px; } .brand-wordmark { font-size: 18px; } .brand-wordmark small { font-size: 5px; } .brand-logo { width: 29px; } .menu-toggle { padding: 8px; } }
 
